@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: order-service-app00
+  labels: { app: order-service-app00 }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: order-service-app00 } }
+  template:
+    metadata: { labels: { app: order-service-app00 } }
+    spec:
+      containers:
+      - name: order-service
+        image: nginx:1.27
+        ports: [{ containerPort: 80 }]
