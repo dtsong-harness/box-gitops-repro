@@ -1,0 +1,18 @@
+apiVersion: harness.io/v1
+kind: Workflow
+type: workflow
+identifier: repro_idp_control_onmain
+name: repro-idp-control-onmain
+owner: cxe
+orgIdentifier: default
+projectIdentifier: cxe_repro
+spec:
+  parameters:
+  - title: Dummy
+    properties: {}
+  steps:
+  - id: log
+    name: log
+    action: debug:log
+    input:
+      message: hello-control
